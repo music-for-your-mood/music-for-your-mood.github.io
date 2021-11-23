@@ -52,6 +52,7 @@ p {
 .talkBtn {
 	width: 100%;
 	height: fit-content;
+	min-height: 5%;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border: 0;
@@ -75,6 +76,8 @@ p {
 }
 
 .inputFrame{
+	position: absolute;
+	bottom: 0;	
 	width: 100%;
 	height: 7%;
 	background-color: gray;
