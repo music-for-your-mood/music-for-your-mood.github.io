@@ -32,7 +32,7 @@ p {
 	bottom: 0;
 	right: 0;
 	width: 20%;
-	height: 10%;
+	height: 5%;
 	vertical-align: bottom;
 	opacity: 0.5;
 }
@@ -44,23 +44,24 @@ p {
 	border-top-right-radius: 15px;
 	border: 0;
 	background-color: white;
+	text-align: center;
 }
 
 .talkFrame{
 	width: 100%;
-	height: 90%;
+	height: 95%;
 	background-color: white;
 }
 
 .talkBody{
 	width: 100%;
-	height: 90%;
+	height: 92%;
 	background-color: gray;
 }
 
 .inputFrame{
 	width: 100%;
-	height: 10%;
+	height: 8%;
 	background-color: black;
 	text-align: center;
 }
@@ -70,18 +71,58 @@ p {
 	top: 20%;
 	border-radius: 10px;
 	border: 0;
-	width: 80%;
+	width: 70%;
 	height: 60%;
 	resize: none;
 }
 
 .submitBtn{
 	width: 10%;
-	margin-left: 2%;
+	margin-left: 5%;
 	height: 100%;
 	border: 0;
 	vertical-align: middle;
 	background-image: url("send_icon.svg");
 	background-size: 100% 100%;
 	background-color: transparent;
+}
+
+.msgViewer{		
+	width: 100%;
+	height: 100%;
+	padding-top: 3%;
+}
+
+.msgUser{
+	width: fit-content;
+	max-width: 60%;
+	height: auto;
+	background-color: white;
+	text-align: right;
+	padding: 2%;
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-left: auto;
+	margin-right: 5%;
+	margin-bottom: 3%;
+	border-radius: 10px;
+	border-top-right-radius: 0;
+	overflow-wrap: break-word;
+}
+
+.msgService{
+	width: fit-content;
+	max-width: 60%;
+	height: auto;
+	background-color: white;
+	text-align: left;
+	padding: 2%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-bottom: 3%;
+	margin-left: 5%;
+	margin-right: auto;
+	border-radius:10px;
+	border-top-left-radius: 0;
+	overflow-wrap: break-word;
 }
