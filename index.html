@@ -16,15 +16,19 @@
 	<p class="musicTitle">Rain On Window with Thunder Sounds</p>
 		<div class="talkBox">
 		<button class="talkBtn" type="button" onclick="talkSizeChange()">
-			<p>무슨 생각을 하고 있나요?</p>
+			무슨 생각을 하고 있나요?
 		</button>
 		<div class="talkFrame">
 			<div class="talkBody">
-
+				<div class="msgViewer"></div>
 			</div>
 			<div class="inputFrame">
-				<textarea name="text" rows="2" cols="15" wrap="hard" class="inputBody"></textarea>
-				<button type="button" class="submitBtn" onclick=""></button></td>
+				<textarea name="text" rows="2" cols="15" wrap="hard" Class="inputBody"></textarea>
+				<script>
+					let textarea = document.querySelector(".inputBody");
+					textarea.addEventListener('keydown', e => enterCheck(e));
+				</script>
+				<button type="button" class="submitBtn" onclick="sendMsg()"></button></td>
 			</div>
 		</div>
 	</div>
