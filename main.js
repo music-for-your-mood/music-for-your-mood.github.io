@@ -17,6 +17,7 @@ function ansMsg(usrMsg){
 	document.querySelector(".msgViewer").innerHTML =
 				document.querySelector(".msgViewer").innerHTML
 				+ "<div class=\"msgService\">" + ans + "</div>";
+	document.querySelector(".msgViewer").scrollTop = document.querySelector(".msgViewer").scrollHeight;
 }
 
 function sendMsg(){
@@ -28,6 +29,7 @@ function sendMsg(){
 				document.querySelector(".msgViewer").innerHTML
 				+ "<div class=\"msgUser\">" + msg + "</div>";
 	document.querySelector(".inputBody").value = "";
+	document.querySelector(".msgViewer").scrollTop = document.querySelector(".msgViewer").scrollHeight;
 	ansMsg(msg);
 }
 
