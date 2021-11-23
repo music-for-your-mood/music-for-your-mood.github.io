@@ -1,9 +1,11 @@
 function talkSizeChange() {
 	const talk = document.querySelector(".talkBox");
 	const talkbtn = document.querySelector(".talkBtn");
+	const msgViewer = document.querySelector(".msgViewer");
 	if (talk.style.height == "100%"){
 		talk.style.height = "5%";
 		talkbtn.style.height = "100%";
+		msgViewer.scrollTop = msgViewer.scrollHeight;
 	}
 	else {
 		talk.style.height = "100%";
