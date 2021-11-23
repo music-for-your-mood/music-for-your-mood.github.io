@@ -31,10 +31,11 @@ p {
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	width: 20%;
+	width: 450px;
+	max-width: 100%;
 	height: 5%;
 	vertical-align: bottom;
-	opacity: 0.6;
+	opacity: 0.8;
 }
 
 .talkBtn {
@@ -56,13 +57,13 @@ p {
 
 .talkBody{
 	width: 100%;
-	height: 92%;
+	height: 93%;
 	background-color: white;
 }
 
 .inputFrame{
 	width: 100%;
-	height: 8%;
+	height: 7%;
 	background-color: gray;
 	text-align: center;
 }
@@ -79,9 +80,9 @@ p {
 
 .submitBtn{
 	width: 10%;
-	margin-left: 5%;
-	height: 100%;
+	height: 60%;
 	border: 0;
+	margin-left: 3%;
 	vertical-align: middle;
 	background-image: url("send_icon.svg");
 	background-size: 100% 100%;
@@ -92,6 +93,7 @@ p {
 	width: 100%;
 	height: 100%;
 	padding-top: 3%;
+	overflow: scroll;
 }
 
 .msgUser{
@@ -99,7 +101,7 @@ p {
 	max-width: 60%;
 	height: auto;
 	background-color: lightgray;
-	text-align: right;
+	text-align: left;
 	padding: 2%;
 	padding-right: 5%;
 	padding-left: 5%;
