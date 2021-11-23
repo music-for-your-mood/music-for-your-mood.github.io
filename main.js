@@ -22,6 +22,8 @@ function ansMsg(usrMsg){
 function sendMsg(){
 	var msg = document.querySelector(".inputBody").value;
 	
+	if (msg.length == 0)
+		return;
 	document.querySelector(".msgViewer").innerHTML = 
 				document.querySelector(".msgViewer").innerHTML
 				+ "<div class=\"msgUser\">" + msg + "</div>";
