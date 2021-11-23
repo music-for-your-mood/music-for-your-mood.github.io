@@ -55,33 +55,35 @@ p {
 .talkBody{
 	width: 100%;
 	height: 90%;
-	background-color: black;
+	background-color: gray;
 }
 
 .inputFrame{
+	position:relative;
 	width: 100%;
-	height: 100%;
+	height: 10%;
 	background-color: black;
 }
 
-.inputTxt{
-	width: 100%;
+.inputBody{
+	position: relative;
+	top: 10%;
+	bottom: 10%;
+	border-radius: 10px;
+	border: 0;
+	width: 80%;
+	height: 60%;
+}
+
+.submitBtn{
+	width: 10%;
+	margin-left: 2%;
 	height: 100%;
-	text-align: left;
-	margin: 10%;
-	background-color: white;
 	border: 0;
 }
 
-.inputBtnFrame{
-	width: 20%;
-	height: 100%;
-}
-
-.inputBtn{
+form{
 	width: 100%;
 	height: 100%;
-	margin: 10%;
-	border: 0;
-	background-color: white;
+	text-align: center;
 }
