@@ -1,3 +1,6 @@
+var name = "";
+var cnvs = 0;
+
 function talkSizeChange() {
 	const talk = document.querySelector(".talkBox");
 	const msgViewer = document.querySelector(".msgViewer");
@@ -10,8 +13,34 @@ function talkSizeChange() {
 	}
 }
 
+function makecnvs(usrMsg){
+	var ret = "";
+
+	if (cnvs == 0) {
+		name = usrMsg;
+		ret = "당신의 이름은 \"" + name + "\"인가요?";
+	}
+	else if (cnvs == 1) {
+		ret = name + " 님, 오늘 하루는 어땠나요?";
+	}
+	else if (cnvs == 2) {
+		ret = name + " 님, 요즘 관심있는 일이 있나요?";
+	}
+	else if (cnvs == 3) {
+		ret = name + " 님, 요즘 고민이 있나요?";
+	}
+	else {
+		cnvs = 0;
+		ret = "다시 대화할까요?"
+	}
+
+	cnvs += 1;
+
+	return ret;
+}
+
 function ansMsg(usrMsg){
-	var ans = "aaa";
+	var ans = makecnvs(usrMsg);
 	
 	document.querySelector(".msgViewer").innerHTML =
 				document.querySelector(".msgViewer").innerHTML
