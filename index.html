@@ -14,13 +14,16 @@
 			clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p class="musicTitle">Rain On Window with Thunder Sounds</p>
-		<div class="talkBox">
+	<div class="talkBox">
 		<button class="talkBtn" type="button" onclick="talkSizeChange()">
 			무슨 생각을 하고 있나요?
 		</button>
 		<div class="talkFrame">
 			<div class="talkBody">
-				<div class="msgViewer"></div>
+				<div class="msgViewer">
+					<div class="msgService">몇 가지 질문에 답해주시면 당신에게 어울리는 음악을 추천해드려요. </div>
+					<div class="msgService">당신의 이름은 무엇인가요?</div>
+				</div>
 			</div>
 			<div class="inputFrame">
 				<textarea name="text" rows="2" cols="15" wrap="hard" Class="inputBody"></textarea>
@@ -28,7 +31,7 @@
 					let textarea = document.querySelector(".inputBody");
 					textarea.addEventListener('keyup', e => enterCheck(e));
 				</script>
-				<button type="button" class="submitBtn" onclick="sendMsg()"></button></td>
+				<button type="button" class="submitBtn" onclick="sendMsg()"></button>
 			</div>
 		</div>
 	</div>
