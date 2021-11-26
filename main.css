@@ -5,6 +5,14 @@
     font-style: normal;
 }
 
+@font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: local('Pretendard Variable'), url('./woff2/PretendardVariable.woff2') format('woff2-variations');
+}
+
 body {
 	background-color: #999999;
 }
@@ -91,6 +99,7 @@ p {
 	width: 70%;
 	height: 60%;
 	resize: none;
+	font-family: 'Pretendard Variable';
 }
 
 .submitBtn{
@@ -112,6 +121,7 @@ p {
 }
 
 .msgUser{
+	font-family: 'Pretendard Variable';
 	width: fit-content;
 	max-width: 60%;
 	height: auto;
@@ -129,6 +139,7 @@ p {
 }
 
 .msgService{
+	font-family: 'Pretendard Variable';
 	width: fit-content;
 	max-width: 60%;
 	height: auto;
