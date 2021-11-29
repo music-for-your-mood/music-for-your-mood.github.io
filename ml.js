@@ -12,11 +12,11 @@ function loadVocab(path){
 
     vocab = JSON.parse(fp_str);
     vocabSize = Object.keys(vocab).length;
-
+	
     fp.close();
 }
 
-function process(vocab, d){
+function process(d){
 	var data = [];
 	var idx = 155 - d.length;
 
