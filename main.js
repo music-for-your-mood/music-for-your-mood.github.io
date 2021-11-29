@@ -24,21 +24,21 @@ function makecnvs(usrMsg){
 		ret = name + " 님, 오늘 하루는 어땠나요?";
 	}
 	else if (cnvs == 2) {
-		//var pred = run(model, usrMsg.trim());
+		var pred = run(usrMsg.trim());
 		ret = "오늘 하루는 힘들었군요. 수고 많으셨어요.";
 	}
 	else if (cnvs == 3) {
 		ret = name + " 님, 요즘 관심있는 일이 있나요?";
 	}
 	else if (cnvs == 4) {
-		//var pred = run(model, usrMsg.trim());
+		var pred = run(usrMsg.trim());
 		ret = "그렇군요.";
 	}
 	else if (cnvs == 5) {
 		ret = name + " 님, 요즘 고민이 있나요?";
 	}
 	else if (cnvs == 6) {
-		//var pred = run(model, usrMsg,trim());
+		var pred = run(usrMsg,trim());
 		ret = "그렇군요.";
 	}
 	else if (cnvs == 7) {
