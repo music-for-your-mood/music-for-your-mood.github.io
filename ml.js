@@ -18,10 +18,15 @@ function loadVocab(path){
 
 function process(vocab, d){
 	var data = [];
-	var idx = 0;
+	var idx = 155 - d.length;
 
 	if (vocab == null){
     	loadVocab('vocab.json');
+	}
+
+	while(idx > 0){
+		data.append(vocabSize + 1);
+		idx--;
 	}
 
 	for(var i in d){
@@ -29,11 +34,6 @@ function process(vocab, d){
 		idx++;
 		if (idx == 155)
 			break;
-	}
-    
-	while (idx < 155){
-		data.append(vocabSize + 1);
-		idx++;
 	}
 	
 	var ret = tf.convert_to_tensor(data);
