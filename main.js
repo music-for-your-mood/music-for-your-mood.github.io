@@ -17,17 +17,32 @@ function makecnvs(usrMsg){
 	var ret = "";
 
 	if (cnvs == 0) {
-		name = usrMsg;
-		ret = "당신의 이름은 \"" + name + "\"인가요?";
+		name = usrMsg.trim();
+		ret = "반가워요, " + name + " 님.";
 	}
 	else if (cnvs == 1) {
 		ret = name + " 님, 오늘 하루는 어땠나요?";
 	}
 	else if (cnvs == 2) {
-		ret = name + " 님, 요즘 관심있는 일이 있나요?";
+		//var pred = run(model, usrMsg.trim());
+		ret = "오늘 하루는 힘들었군요. 수고 많으셨어요.";
 	}
 	else if (cnvs == 3) {
+		ret = name + " 님, 요즘 관심있는 일이 있나요?";
+	}
+	else if (cnvs == 4) {
+		//var pred = run(model, usrMsg.trim());
+		ret = "그렇군요.";
+	}
+	else if (cnvs == 5) {
 		ret = name + " 님, 요즘 고민이 있나요?";
+	}
+	else if (cnvs == 6) {
+		//var pred = run(model, usrMsg,trim());
+		ret = "그렇군요.";
+	}
+	else if (cnvs == 7) {
+		ret = name + " 님을 위해 추천하는 음악은 이거예요.";
 	}
 	else {
 		cnvs = 0;
@@ -58,6 +73,7 @@ function sendMsg(){
 				+ "<div class=\"msgUser\">" + msg + "</div>";
 	document.querySelector(".inputBody").value = "";
 	document.querySelector(".msgViewer").scrollTop = document.querySelector(".msgViewer").scrollHeight;
+	ansMsg(msg);
 	ansMsg(msg);
 }
 
