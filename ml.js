@@ -30,11 +30,11 @@ function process(vocab, d){
    return tf.oneHot(data, vocabSize);
 }
 
-function run(model, raw_data){
+function run(raw_data){
     var data = process(raw_data);
 
     if (model == null){
-        loadModel('');
+        loadModel('./modeljs/model.json');
     }
     var pred = model.predict(data);
 
