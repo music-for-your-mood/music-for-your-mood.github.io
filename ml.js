@@ -38,10 +38,10 @@ function process(d){
 
 function run(raw_data){
     var data = process(raw_data);
+	console.log(data);
     var pred = model.predict(data);
 	var emotion = pred[0].reshape([-1]).argMax();
 	var sit = pred[1].reshape([-1]).argMax();
-	
-	console.log(emotion.print());
+
     return [emotion, sit];
 }
