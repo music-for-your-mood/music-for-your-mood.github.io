@@ -45,7 +45,7 @@ function run(raw_data){
 	console.log(pred[1].print());
 	var emotion = pred[0].reshape([-1]).argMax();
 	var sit = pred[1].reshape([-1]).argMax();
-	console.log(emotion);
-	console.log(sit);
+	console.log(emotion.dataSync());
+	console.log(sit.dataSync());
     return [emotion, sit];
 }
