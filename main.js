@@ -41,6 +41,39 @@ function makeEmo(pred){
 	return str;
 }
 
+function chooseMusic(){
+	var totalEmo = totalEmotion();
+	var ret = "";
+	var address = "";
+
+	if (totalEmo == 0){
+		ret = "";
+		address = "";
+	}
+	else if (totalEmo == 1){
+		ret = "";
+		address = "";
+	}
+	else if (totalEmo == 2){	
+		ret = "";
+		address = "";
+	}
+	else if (totalEmo == 3){
+		ret = "";
+		address = "";
+	}
+	else if (totalEmo == 4){
+		ret = "";
+		address = "";
+	}
+	else if (totalEmo == 5){
+		ret = "";
+		address = "";
+	}
+	
+	return ret;
+}
+
 function makecnvs(usrMsg){
 	var ret = "";
 
@@ -70,7 +103,8 @@ function makecnvs(usrMsg){
 		ret = makeEmo(pred[0]);
 	}
 	else if (cnvs == 7) {
-		ret = name + " 님을 위해 추천하는 음악은 이거예요.";
+		var recommend = chooseMusic();
+		ret = name + " 님을 위해 추천하는 음악은 ";
 	}
 	else {
 		cnvs = 0;
