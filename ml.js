@@ -7,13 +7,8 @@ function loadModel(path){
 }
 
 function loadVocab(path){
-    var fp = open(path, 'r');
-    var fp_str = fp.read();
-
-    vocab = JSON.parse(fp_str);
+    let vocab = JSON.parse(vocabs);
     vocabSize = Object.keys(vocab).length;
-	
-    fp.close();
 }
 
 function process(d){
