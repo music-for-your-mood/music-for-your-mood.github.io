@@ -31,8 +31,11 @@ function makeEmo(pred){
 	else if (pred == 4){
 		str = "그럴 수도 있죠. 괜찮을 거예요.";
 	}
-	else{
+	else if (pred == 5){
 		str = "정말 기쁜 일이에요. 축하드려요.";
+	}
+	else{
+		str = "그렇군요."
 	}
 
 	return str;
