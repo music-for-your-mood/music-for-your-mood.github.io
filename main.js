@@ -63,7 +63,7 @@ function makecnvs(usrMsg){
 		ret = name + " 님, 요즘 고민이 있나요?";
 	}
 	else if (cnvs == 6) {
-		var pred = run(usrMsg,trim());
+		var pred = run(usrMsg.trim());
 		ret = makeEmo(pred);
 	}
 	else if (cnvs == 7) {
