@@ -1,6 +1,7 @@
 var vocab = null;
 var model = null;
 var vocabSize = 0;
+var totalPredict = null; 
 
 async function loadModel(){
     model = await tf.loadLayersModel('modeljs/model.json');
@@ -41,6 +42,12 @@ function run(raw_data){
     var data = process(raw_data);
 	console.log(data.print());
     var pred = model.predict(data);
+	if (totalPredict == null){
+		totalPredict = pred[0].reshape([-1]);
+	}
+	else{
+		totalPredict = totalPredict.add(pred[0].reshape[-1]);
+	}
 	console.log(pred[0].print());
 	console.log(pred[1].print());
 	var emotion = pred[0].reshape([-1]).argMax().dataSync();
@@ -48,4 +55,8 @@ function run(raw_data){
 	console.log(emotion);
 	console.log(sit);
     return [emotion[0], sit[0]];
+}
+
+function totalEmotion(){
+	return totalPredict.argMax().dataSync()[0];
 }
