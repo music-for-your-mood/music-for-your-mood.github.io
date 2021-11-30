@@ -2,11 +2,11 @@ var vocab = null;
 var model = null;
 var vocabSize = 0;
 
-async function loadModel(path){
+function loadModel(path){
     model = await tf.loadLayersModel(path);
 }
 
-function loadVocab(path){
+function loadVocab(){
     vocab = JSON.parse(vocabs);
     vocabSize = Object.keys(vocab).length;
 }
@@ -16,7 +16,7 @@ function process(d){
 	var idx = 155 - d.length;
 	
 	if (vocab == null){
-    	loadVocab('vocab.json');
+    	loadVocab();
 	}
 
 	while(idx > 0){
@@ -35,7 +35,7 @@ function process(d){
 	return tf.reshape(ret, [1,155]);
 }
 
-function run(raw_data){
+async function run(raw_data){
     var data = process(raw_data);
 
     if (model == null){
