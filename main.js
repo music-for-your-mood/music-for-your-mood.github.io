@@ -16,22 +16,22 @@ function talkSizeChange() {
 function makeEmo(pred){
 	var str = "";
 	
-	if (pred == tf.tensor(0)){
+	if (pred == 0){
 		str = "정말 화가 나시겠어요.";
 	}
-	else if (pred == tf.tensor(1)){
+	else if (pred == 1){
 		str = "정말 슬프겠어요. 기운내세요.";
 	}
-	else if (pred == tf.tensor(2)){
+	else if (pred == 2){
 		str = "불안하시군요. 다 괜찮으실 거예요.";
 	}
-	else if (pred == tf.tensor(3)){
+	else if (pred == 3){
 		str = "그렇군요. 안타까운 일이에요.";
 	}
-	else if (pred == tf.tensor(4)){
+	else if (pred == 4){
 		str = "그럴 수도 있죠. 괜찮을 거예요.";
 	}
-	else if (pred == tf.tensor(5)){
+	else if (pred == 5){
 		str = "정말 기쁜 일이에요. 축하드려요.";
 	}
 	else{
