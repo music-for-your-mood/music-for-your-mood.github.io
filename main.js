@@ -50,21 +50,21 @@ function makecnvs(usrMsg){
 	}
 	else if (cnvs == 2) {
 		var pred = run(usrMsg.trim());
-		ret = makeEmo(pred);
+		ret = makeEmo(pred[0]);
 	}
 	else if (cnvs == 3) {
 		ret = name + " 님, 요즘 관심있는 일이 있나요?";
 	}
 	else if (cnvs == 4) {
 		var pred = run(usrMsg.trim());
-		ret = makeEmo(pred);
+		ret = makeEmo(pred[0]);
 	}
 	else if (cnvs == 5) {
 		ret = name + " 님, 요즘 고민이 있나요?";
 	}
 	else if (cnvs == 6) {
 		var pred = run(usrMsg.trim());
-		ret = makeEmo(pred);
+		ret = makeEmo(pred[0]);
 	}
 	else if (cnvs == 7) {
 		ret = name + " 님을 위해 추천하는 음악은 이거예요.";
