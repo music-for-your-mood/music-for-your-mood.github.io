@@ -24,10 +24,11 @@ function process(d){
 		data.push(vocabSize + 1);
 		idx--;
 	}
-	
+
 	for(var i in d){
-		if (i in vocab)
-    		data.push(vocab[i]);
+		var chri = d.charAt(i);
+		if (Object.keys(vocab).includes(chri))
+    		data.push(vocab[chri]);
 		else
 			data.push(vocabSize);
 	}
