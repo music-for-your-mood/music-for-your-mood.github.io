@@ -2,8 +2,8 @@ var vocab = null;
 var model = null;
 var vocabSize = 0;
 
-async function loadModel(path){
-    model = await tf.loadLayersModel(path);
+async function loadModel(){
+    model = await tf.loadLayersModel('modeljs/model.json');
 }
 
 function loadVocab(){
@@ -39,7 +39,7 @@ function run(raw_data){
     var data = process(raw_data);
 
     if (model == null){
-        loadModel('modeljs/model.json');
+        loadModel();
     }
     var pred = model.predict(data);
 	var emotion = pred[0].argmax();
