@@ -11,6 +11,11 @@ function loadVocab(){
     vocabSize = Object.keys(vocab).length;
 }
 
+function initialize(){
+	loadVocab();
+	loadModel();
+}
+
 function process(d){
 	var data = new Array();
 	var idx = 155 - d.length;
