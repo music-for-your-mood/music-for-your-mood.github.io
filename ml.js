@@ -42,6 +42,6 @@ function run(raw_data){
 	var emotion = pred[0].argMax();
 	var sit = pred[1].argMax();
 	
-	console.log(emotion.print);
+	console.log(emotion.print());
     return [emotion, sit];
 }
