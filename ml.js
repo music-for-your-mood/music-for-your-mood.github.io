@@ -43,9 +43,9 @@ function run(raw_data){
     var pred = model.predict(data);
 	console.log(pred[0].print());
 	console.log(pred[1].print());
-	var emotion = pred[0].reshape([-1]).argMax();
-	var sit = pred[1].reshape([-1]).argMax();
-	console.log(emotion.print());
-	console.log(sit.print());
+	var emotion = int(pred[0].reshape([-1]).argMax());
+	var sit = int(pred[1].reshape([-1]).argMax());
+	console.log(emotion);
+	console.log(sit);
     return [emotion, sit];
 }
