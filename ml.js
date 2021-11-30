@@ -12,9 +12,9 @@ function loadVocab(path){
 }
 
 function process(d){
-	var data = new Array(155);
+	var data = new Array();
 	var idx = 155 - d.length;
-
+	
 	if (vocab == null){
     	loadVocab('vocab.json');
 	}
@@ -23,15 +23,15 @@ function process(d){
 		data.push(vocabSize + 1);
 		idx--;
 	}
-
+	
 	for(var i in d){
-    	data.push(vocab[i]);
-		idx++;
-		if (idx == 155)
-			break;
+		if (i in vocab)
+    		data.push(vocab[i]);
+		else
+			data.push(vocabSize);
 	}
 	
-	var ret = tf.convert_to_tensor(data);
+	var ret = tf.tensor(data);
 	return tf.reshape(ret, [1,155]);
 }
 
