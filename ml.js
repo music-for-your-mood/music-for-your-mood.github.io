@@ -6,7 +6,7 @@ async function loadModel(path){
     model = await tf.loadLayersModel(path);
 }
 
-function loadVocab(path){
+function loadVocab(){
     vocab = JSON.parse(vocabs);
     vocabSize = Object.keys(vocab).length;
 }
@@ -16,7 +16,7 @@ function process(d){
 	var idx = 155 - d.length;
 	
 	if (vocab == null){
-    	loadVocab('vocab.json');
+    	loadVocab();
 	}
 
 	while(idx > 0){
