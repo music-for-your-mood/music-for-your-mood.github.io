@@ -35,7 +35,7 @@ function process(d){
 	return tf.reshape(ret, [1,155]);
 }
 
-function run(raw_data){
+async function run(raw_data){
     var data = process(raw_data);
 
     if (model == null){
