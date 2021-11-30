@@ -7,12 +7,12 @@ function loadModel(path){
 }
 
 function loadVocab(path){
-    let vocab = JSON.parse(vocabs);
+    vocab = JSON.parse(vocabs);
     vocabSize = Object.keys(vocab).length;
 }
 
 function process(d){
-	var data = [];
+	var data = new Array(155);
 	var idx = 155 - d.length;
 
 	if (vocab == null){
@@ -20,12 +20,12 @@ function process(d){
 	}
 
 	while(idx > 0){
-		data.append(vocabSize + 1);
+		data.push(vocabSize + 1);
 		idx--;
 	}
 
 	for(var i in d){
-    	data.append(vocab[i]);
+    	data.push(vocab[i]);
 		idx++;
 		if (idx == 155)
 			break;
