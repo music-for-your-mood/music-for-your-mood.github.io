@@ -13,6 +13,31 @@ function talkSizeChange() {
 	}
 }
 
+function makeEmo(pred){
+	var str = "";
+	
+	if (pred == 0){
+		str = "정말 화가 나시겠어요.";
+	}
+	else if (pred == 1){
+		str = "정말 슬프겠어요. 기운내세요.";
+	}
+	else if (pred == 2){
+		str = "불안하시군요. 다 괜찮으실 거예요.";
+	}
+	else if (pred == 3){
+		str = "그렇군요. 안타까운 일이에요.";
+	}
+	else if (pred == 4){
+		str = "그럴 수도 있죠. 괜찮을 거예요.";
+	}
+	else{
+		str = "정말 기쁜 일이에요. 축하드려요.";
+	}
+
+	return str;
+}
+
 function makecnvs(usrMsg){
 	var ret = "";
 
@@ -25,21 +50,21 @@ function makecnvs(usrMsg){
 	}
 	else if (cnvs == 2) {
 		var pred = run(usrMsg.trim());
-		ret = "오늘 하루는 힘들었군요. 수고 많으셨어요.";
+		ret = makeEmo(pred);
 	}
 	else if (cnvs == 3) {
 		ret = name + " 님, 요즘 관심있는 일이 있나요?";
 	}
 	else if (cnvs == 4) {
 		var pred = run(usrMsg.trim());
-		ret = "그렇군요.";
+		ret = makeEmo(pred);
 	}
 	else if (cnvs == 5) {
 		ret = name + " 님, 요즘 고민이 있나요?";
 	}
 	else if (cnvs == 6) {
 		var pred = run(usrMsg,trim());
-		ret = "그렇군요.";
+		ret = makeEmo(pred);
 	}
 	else if (cnvs == 7) {
 		ret = name + " 님을 위해 추천하는 음악은 이거예요.";
