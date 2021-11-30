@@ -41,6 +41,7 @@ function run(raw_data){
     var pred = model.predict(data);
 	var emotion = pred[0].argMax();
 	var sit = pred[1].argMax();
-
+	
+	console.log([emotion, sit]);
     return [emotion, sit];
 }
