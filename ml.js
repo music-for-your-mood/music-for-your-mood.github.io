@@ -2,8 +2,8 @@ var vocab = null;
 var model = null;
 var vocabSize = 0;
 
-function loadModel(path){
-    model = tf.loadLayersModel(path);
+async function loadModel(path){
+    model = await tf.loadLayersModel(path);
 }
 
 function loadVocab(path){
