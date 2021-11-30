@@ -46,7 +46,7 @@ function run(raw_data){
 		totalPredict = pred[0].reshape([-1]);
 	}
 	else{
-		totalPredict = totalPredict.add(pred[0].reshape[-1]);
+		totalPredict = totalPredict.add(pred[0].reshape([-1]));
 	}
 	console.log(pred[0].print());
 	console.log(pred[1].print());
