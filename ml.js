@@ -39,9 +39,11 @@ function run(raw_data){
     var data = process(raw_data);
 
     if (model == null){
-        loadModel('./modeljs/model.json');
+        loadModel('modeljs/model.json');
     }
     var pred = model.predict(data);
-	
-    return pred;
+	var emotion = pred[0].argmax();
+	var sit = pred[1].argmax();
+
+    return [emotion, sit];
 }
