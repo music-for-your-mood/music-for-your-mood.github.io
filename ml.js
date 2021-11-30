@@ -39,12 +39,8 @@ function process(d){
 function run(raw_data){
     var data = process(raw_data);
     var pred = model.predict(data);
-	
-	console.log(pred);
-	console.log(pred[0]);
-	console.log(pred[1]);
-	var emotion = pred[0].argmax();
-	var sit = pred[1].argmax();
+	var emotion = pred[0].argMax();
+	var sit = pred[1].argMax();
 
     return [emotion, sit];
 }
