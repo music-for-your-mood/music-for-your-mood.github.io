@@ -71,6 +71,11 @@ function chooseMusic(){
 		address = "";
 	}
 	
+	var title = document.querySelector('.musicTitle');
+	var video = document.querySelector('.musicBox');
+	
+	title.innerHTML = ret;
+	video.innerHTML = address;	
 	return ret;
 }
 
