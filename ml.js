@@ -19,10 +19,6 @@ function initialize(){
 function process(d){
 	var data = new Array();
 	var idx = 155 - d.length;
-	
-	if (vocab == null){
-    	loadVocab();
-	}
 
 	while(idx > 0){
 		data.push(vocabSize + 1);
@@ -42,10 +38,6 @@ function process(d){
 
 function run(raw_data){
     var data = process(raw_data);
-
-    if (model == null){
-        loadModel();
-    }
     var pred = model.predict(data);
 	var emotion = pred[0].argmax();
 	var sit = pred[1].argmax();
