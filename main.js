@@ -102,14 +102,14 @@ function makecnvs(usrMsg){
 		ret = makeEmo(pred[0]);
 	}
 	else if (cnvs == 3) {
-		ret = name + " 님, 요즘 관심있는 일이 있나요?";
+		ret = name + " 님, 요즘 관심 있는 일은 무엇인가요?";
 	}
 	else if (cnvs == 4) {
 		var pred = run(usrMsg.trim());
 		ret = makeEmo(pred[0]);
 	}
 	else if (cnvs == 5) {
-		ret = name + " 님, 요즘 고민이 있나요?";
+		ret = name + " 님, 평소에는 무슨 생각을 하나요?";
 	}
 	else if (cnvs == 6) {
 		var pred = run(usrMsg.trim());
