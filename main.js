@@ -80,7 +80,7 @@ function chooseMusic(){
 	
 	var title = document.querySelector('.musicTitle');
 	var video = document.querySelector('.musicBox');
-	document.querySelector('body').style.background-color = color;
+	document.querySelector('body').style.backgroundColor = color;
 
 	title.innerHTML = ret;
 	video.innerHTML = address;	
