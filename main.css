@@ -29,11 +29,6 @@ h3 {
 	text-align: center;
 }
 
-.player {
-	width: 30%;
-	aspect-ratio: 16/9;
-}
-
 .musicTitle{
 	font-family: 'KCC-eunyoung';
 	font-size: 40pt;
