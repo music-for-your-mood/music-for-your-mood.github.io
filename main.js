@@ -117,7 +117,7 @@ function makecnvs(usrMsg){
 	}
 	else if (cnvs == 7) {
 		var recommend = chooseMusic();
-		ret = name + " 님을 위해 추천하는 음악은 " + recomment + "이에요.";
+		ret = name + " 님을 위해 추천하는 음악은 " + recommend + "이에요.";
 	}
 	else {
 		cnvs = 0;
