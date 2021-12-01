@@ -47,28 +47,28 @@ function chooseMusic(){
 	var address = "";
 
 	if (totalEmo == 0){
-		ret = "";
-		address = "";
+		ret = "Taylor Swift - Look What You Made Me Do";
+		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/3tmd-ClpJxA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 	}
 	else if (totalEmo == 1){
-		ret = "";
-		address = "";
+		ret = "Hoshino Gen - Fushigi";
+		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/ilnLczvLGAY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 	}
 	else if (totalEmo == 2){	
-		ret = "";
-		address = "";
+		ret = "Amazarashi - Namae";
+		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/5S4GLqTcQSs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 	}
 	else if (totalEmo == 3){
-		ret = "";
-		address = "";
+		ret = "Linkin Park - One More Light";
+		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/Tm8LGxTLtQk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 	}
 	else if (totalEmo == 4){
-		ret = "";
-		address = "";
+		ret = "나이트오프 - 잠";
+		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/x-k8gL_r__U\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";	
 	}
 	else if (totalEmo == 5){
-		ret = "";
-		address = "";
+		ret = "Cheat Codes X Sofia Reyes X Willy William - Highway";
+		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/a37wb3jG6rA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
 	}
 	
 	var title = document.querySelector('.musicTitle');
