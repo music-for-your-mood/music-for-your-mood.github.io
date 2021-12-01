@@ -121,6 +121,7 @@ function makecnvs(usrMsg){
 	}
 	else {
 		cnvs = 0;
+		totalPredict = null;
 		ret = "다시 대화할까요?"
 	}
 
