@@ -45,35 +45,43 @@ function chooseMusic(){
 	var totalEmo = totalEmotion();
 	var ret = "";
 	var address = "";
+	var color = "";
 
 	if (totalEmo == 0){
 		ret = "Taylor Swift - Look What You Made Me Do";
 		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/3tmd-ClpJxA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+		color = "#885555";
 	}
 	else if (totalEmo == 1){
 		ret = "Hoshino Gen - Fushigi";
 		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/ilnLczvLGAY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+		color = "#555566";
 	}
 	else if (totalEmo == 2){	
 		ret = "Amazarashi - Namae";
 		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/5S4GLqTcQSs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+		color = "#557788";
 	}
 	else if (totalEmo == 3){
 		ret = "Linkin Park - One More Light";
 		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/Tm8LGxTLtQk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+		color = "#665566";
 	}
 	else if (totalEmo == 4){
 		ret = "나이트오프 - 잠";
 		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/x-k8gL_r__U\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";	
+		color = "#778855";
 	}
 	else if (totalEmo == 5){
 		ret = "Cheat Codes X Sofia Reyes X Willy William - Highway";
 		address = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/a37wb3jG6rA\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+		color = "#88BBCC";
 	}
 	
 	var title = document.querySelector('.musicTitle');
 	var video = document.querySelector('.musicBox');
-	
+	document.querySelector('body').style.background-color = color;
+
 	title.innerHTML = ret;
 	video.innerHTML = address;	
 	return ret;
@@ -109,7 +117,7 @@ function makecnvs(usrMsg){
 	}
 	else if (cnvs == 7) {
 		var recommend = chooseMusic();
-		ret = name + " 님을 위해 추천하는 음악은 ";
+		ret = name + " 님을 위해 추천하는 음악은 " + recomment + "이에요.";
 	}
 	else {
 		cnvs = 0;
