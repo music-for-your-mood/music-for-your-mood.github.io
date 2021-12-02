@@ -13,7 +13,7 @@ function talkSizeChange() {
 	}
 	else {
 		talk.style.height = "100%";
-		talkbtn.style.height = "5%";
+		talkbtn.style.height = "fit-content";
 		talkFrm.style.height = "95%";
 		msgViewer.scrollTop = msgViewer.scrollHeight;
 	}
