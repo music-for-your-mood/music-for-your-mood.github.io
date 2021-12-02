@@ -3,13 +3,16 @@ var cnvs = 0;
 
 function talkSizeChange() {
 	const talk = document.querySelector(".talkBox");
+	const talkbtn = document.querySelector(".talkBtn");
 	const msgViewer = document.querySelector(".msgViewer");
 	if (talk.style.height == "100%"){
 		talk.style.height = "5%";
-		msgViewer.scrollTop = msgViewer.scrollHeight;
+		talkbtn.style.height = "100%";
 	}
 	else {
 		talk.style.height = "100%";
+		talkbtn.style.height = "fit-content";
+		msgViewer.scrollTop = msgViewer.scrollHeight;
 	}
 }
 
