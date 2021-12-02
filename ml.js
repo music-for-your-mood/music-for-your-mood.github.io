@@ -3,8 +3,8 @@ var model = null;
 var vocabSize = 0;
 var totalPredict = null; 
 
-function loadModel(){
-    model = tf.loadLayersModel('modeljs/model.json');
+async function loadModel(){
+    model = await tf.loadLayersModel('modeljs/model.json');
 }
 
 function loadVocab(){
