@@ -4,14 +4,17 @@ var cnvs = 0;
 function talkSizeChange() {
 	const talk = document.querySelector(".talkBox");
 	const talkbtn = document.querySelector(".talkBtn");
+	const talkFrm = document.querySelector(".talkFrame");
 	const msgViewer = document.querySelector(".msgViewer");
 	if (talk.style.height == "100%"){
 		talk.style.height = "5%";
 		talkbtn.style.height = "100%";
+		talkFrm.style.height = "0%";
 	}
 	else {
 		talk.style.height = "100%";
-		talkbtn.style.height = "fit-content";
+		talkbtn.style.height = "5%";
+		talkFrm.style.height = "95%";
 		msgViewer.scrollTop = msgViewer.scrollHeight;
 	}
 }
