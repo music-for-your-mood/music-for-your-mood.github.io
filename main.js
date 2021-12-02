@@ -1,6 +1,8 @@
 var name = "";
 var cnvs = 0;
 
+document.addEventListener("DOMContentLoaded", initialize);
+
 function talkSizeChange() {
 	const talk = document.querySelector(".talkBox");
 	const talkbtn = document.querySelector(".talkBtn");
