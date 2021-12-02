@@ -59,8 +59,7 @@ a {
 
 .talkBtn {
 	width: 100%;
-	height: fit-content;
-	min-height: 5%;
+	height: 100%;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border: 0;
